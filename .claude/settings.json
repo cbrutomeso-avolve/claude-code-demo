@@ -1,10 +1,4 @@
 {
-  "mcpServers": {
-    "sqlite": {
-      "command": ".venv/Scripts/mcp-server-sqlite",
-      "args": ["--db-path", "data/walmart.db"]
-    }
-  },
   "hooks": {
     "PreToolUse": [
       {

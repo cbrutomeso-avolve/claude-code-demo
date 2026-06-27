@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "sqlite": {
+      "command": ".venv/Scripts/mcp-server-sqlite.exe",
+      "args": ["--db-path", "data/walmart.db"]
+    }
+  }
+}

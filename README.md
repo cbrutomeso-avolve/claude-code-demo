@@ -44,7 +44,9 @@ claude
 
 ## MCP (SQLite)
 
-The SQLite MCP server is configured in `.claude/settings.json`. It starts automatically when you open Claude Code **after** the `.venv` has been set up and `python setup.py` has been run — the server binary lives inside `.venv/Scripts/`.
+The SQLite MCP server is configured in `.mcp.json` at the project root. It starts automatically when you open Claude Code **after** the `.venv` has been set up and `python setup.py` has been run — the server binary lives inside `.venv/Scripts/`.
+
+The first time you open Claude Code in this project, you may be prompted to approve the MCP server defined in `.mcp.json`. Accept it.
 
 To verify it's connected, run inside Claude Code:
 
@@ -82,8 +84,9 @@ Historical weekly sales for 45 Walmart stores (2010–2012).
 │   ├── Walmart_Sales.csv            # Raw dataset (from Kaggle)
 │   └── walmart.db                   # SQLite database (generated)
 ├── output/                          # Generated plots and reports
+├── .mcp.json                        # MCP server config (project-scoped)
 └── .claude/
-    ├── settings.json                # MCP server + hooks config
+    ├── settings.json                # Hooks config
     ├── agents/
     │   └── insight-writer.md        # Custom subagent definition
     ├── skills/
