@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "sqlite": {
+      "command": ".venv/Scripts/mcp-server-sqlite",
+      "args": ["--db-path", "data/walmart.db"]
+    }
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/protect_db.py"
+          }
+        ]
+      }
+    ]
+  }
+}
