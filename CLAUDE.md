@@ -22,3 +22,8 @@ The goal is to uncover patterns in sales performance, seasonality, and the impac
 
 ## Important
 Never delete `data/walmart.db`. Run `setup.py` to recreate it from the CSV if needed.
+
+## Common Mistakes to Avoid
+- **SQLite Table Name**: The table is named `walmart_sales`, NOT `walmart`. Always use `walmart_sales` in SQL queries.
+- **Unicode in PowerShell**: Avoid Unicode characters (checkmarks, emojis) in print statements. Use ASCII-safe output like `[DONE]` instead of `✓`.
+- **Date Format in CSV**: Dates in the CSV are in `DD-MM-YYYY` format. Use `pd.to_datetime(df['Date'], format='%d-%m-%Y')` when converting.
