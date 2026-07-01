@@ -9,6 +9,15 @@
             "command": "python .claude/hooks/protect_db.py"
           }
         ]
+      },
+      {
+        "matcher": "PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/protect_db.py"
+          }
+        ]
       }
     ]
   }
